@@ -1,0 +1,9 @@
+<ion-view view-title="Lives">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="live in lives" href="#/app/lives/{{live.id}}">
+        {{live.title}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

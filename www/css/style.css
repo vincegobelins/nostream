@@ -1,0 +1,35 @@
+/* Empty. Add your own CSS if you like */
+.scroll-content {
+  background: #303030;
+}
+
+.title-live {
+  padding: 20px 0; margin: 0;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  background: #387EF5;
+}
+#video {
+  display: none;
+  width: 100%; height: 100%;
+  -webkit-transform: none; /* Safari and Chrome */
+  -moz-transform: none; /* Firefox */
+  -ms-transform: none; /* IE 9 */
+  -o-transform: none; /* Opera */
+  transform: none;
+}
+
+#live {
+  width: 100%; height: 100%;
+  -webkit-transform: none; /* Safari and Chrome */
+  -moz-transform: none; /* Firefox */
+  -ms-transform: none; /* IE 9 */
+  -o-transform: none; /* Opera */
+  transform: none;
+}
+
+#start {
+  display: block;
+  margin: 20px auto;
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/scss/ionic.app.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/css/style.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/liveCtrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/directives/navigator.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/browse.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/live.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/lives.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/menu.html" charset="UTF-8" />
+  </component>
+</project>

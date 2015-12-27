@@ -1,0 +1,16 @@
+<ion-view view-title="Live">
+  <ion-content>
+    <h1 class="title-live">{{title}}</h1>
+    <canvas ns-navigator id="live" width="500px" height="350px"></canvas>
+    <video id="video" preload src="http://vincentaguettaz.com/nostream/movie/output.mp4" type="video/webm"></video>
+    <button id="start" class="button button-positive">
+      Start live
+    </button>
+    <div class="hide button-bar bar-light">
+      <a id="left" class="button controls"><i class="icon ion-arrow-left-c"></i></a>
+      <a id="up" class="button controls"><i class="icon ion-arrow-up-c"></i></a>
+      <a id="down" class="button controls"><i class="icon ion-arrow-down-c"></i></a>
+      <a id="right" class="button controls"><i class="icon ion-arrow-right-c"></i></a>
+    </div>
+  </ion-content>
+</ion-view>
