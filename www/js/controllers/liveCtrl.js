@@ -1,23 +1,23 @@
 angular.module('starter')
 
-  .controller('LiveCtrl', function($scope, $stateParams) {
+  .controller('LiveCtrl', function($scope, $stateParams, databaseFactory) {
 
     var init, setListeners, startLive, setLivePosition;
     var startBtn, video, controls;
 
     init = function(){
+      var id = $stateParams['liveId'];
+      $scope.live = databaseFactory.getCaptation(id);
 
-      $scope.title = 'Fête de la musique';
       startBtn = document.getElementById('start');
       video = document.getElementById('video');
       controls = document.getElementsByClassName('controls');
 
       setListeners();
-
     }
 
     setListeners = function(){
-      start.addEventListener("click", startLive);
+      startBtn.addEventListener("click", startLive);
       for(var i=0;i<controls.length;i++){
         controls[i].addEventListener('click', function(){
           setLivePosition(this.id);

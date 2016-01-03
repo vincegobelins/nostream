@@ -1,10 +1,19 @@
 /* Empty. Add your own CSS if you like */
+#capture {
+  max-width: 100%;
+}
+
 .scroll-content {
   background: #303030;
 }
 
+.bar {
+  border: 0 !important;
+  background-image: none !important;
+}
+
 .title-live {
-  padding: 20px 0; margin: 0;
+  padding: 14px 0; margin: 0;
   color: #ffffff;
   text-align: center;
   font-size: 16px;
@@ -29,7 +38,51 @@
   transform: none;
 }
 
-#start {
+#start, #capture {
   display: block;
   margin: 20px auto;
+}
+
+.ns-list {
+   margin: 10px; padding: 20px;
+   border-bottom: 5px solid #387ef5;
+   background: #ffffff;
+   color: #303030;
+   text-decoration: none;
+}
+
+.ns-list-title {
+  padding-bottom: 10px;
+  color: #387ef5;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.ns-detail {
+  padding: 10px;
+  color: #a1a1a1;
+}
+
+.ns-hidden {
+  display: none;
+}
+
+.ng-enter, .animation.ng-leave {
+  transition: all 0.5s ease-out;
+}
+.ng-enter {
+  transform: translateY(20%);
+  opacity: 0;
+}
+.ng-leave {
+  transform: translateY(-0%);
+  opacity: 1;
+}
+.ng-enter.ng-enter-active {
+  transform: translateY(0%);
+  opacity: 1;
+}
+.ng-leave.ng-leave-active {
+  transform: translateY(20%);
+  opacity: 0;
 }

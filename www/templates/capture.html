@@ -1,0 +1,15 @@
+<ion-view view-title="Capture">
+  <ion-content>
+    <h1 class="title-live">{{title}}</h1>
+    <ul>
+      <li ng-repeat="(key, value) in lives" class="ns-list ns-list-live">
+        <p class="ns-list-title">{{value.title}}</p>
+        <p><span class="ion-flag"></span> {{value.location}} <span class="ion-at"></span> {{value.author}}</p>
+        <button ng-click="capture(key)" class="button button-outline button-assertive"><span class="ion-ionic"></span> Filmer</button>
+      </li>
+    </ul>
+    <button id="capture" class="button button-outline button-positive">
+      Ajouter un événement
+    </button>
+  </ion-content>
+</ion-view>

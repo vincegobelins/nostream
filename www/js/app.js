@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives', 'firebase'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -22,7 +22,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives']
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.constant("config", {
+    "BDD": "--",
+    "FTP": "--"
+})
+
+.config(function($stateProvider, $urlRouterProvider, $sceDelegateProvider) {
   $stateProvider
 
     .state('app', {
@@ -41,11 +46,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives']
     }
   })
 
-  .state('app.browse', {
-      url: '/browse',
+  .state('app.capture', {
+      url: '/capture',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'templates/capture.html',
+          controller: 'CaptureCtrl'
         }
       }
     })
@@ -70,4 +76,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives']
   });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/lives');
+
+  $sceDelegateProvider.resourceUrlWhitelist([
+      // Allow same origin resource loads.
+      'self',
+      // Allow loading from our assets domain.  Notice the difference between * and **.
+      'http://vincentaguettaz.com/nostream/movie/**'
+  ]);
 });

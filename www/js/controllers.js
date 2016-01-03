@@ -41,10 +41,6 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('LivesCtrl', function($scope) {
-  $scope.lives = [
-    { title: 'Tomorowland', id: 1 },
-    { title: 'Fête de la musique', id: 2 },
-    { title: 'Les nuits de fourvières', id: 3 }
-  ];
+.controller('LivesCtrl', function($scope, databaseFactory) {
+    $scope.lives = databaseFactory.getCaptations();
 })

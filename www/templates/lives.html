@@ -1,9 +1,13 @@
 <ion-view view-title="Lives">
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="live in lives" href="#/app/lives/{{live.id}}">
-        {{live.title}}
-      </ion-item>
+      <ul>
+        <li ng-repeat="(key, value) in lives" ng-class="{'ns-hidden': !value.grid}" class="ns-list ns-list-live">
+          <p class="ns-list-title">{{value.title}}</p>
+          <p><span class="ion-flag"></span> {{value.location}} <span class="ion-at"></span> {{value.author}}</p>
+          <a href="#/app/lives/{{key}}" class="button button-outline button-positive"><span class="ion-search"></span> Accéder au live</a>
+        </li>
+      </ul>
     </ion-list>
   </ion-content>
 </ion-view>
