@@ -23,8 +23,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
 })
 
 .constant("config", {
-    "BDD": "--",
-    "FTP": "--"
+    "BDD": "https://nostream.firebaseio.com/",
+    "FTP": "http://vincentaguettaz.com/NoStreamPHP/nostream.php"
 })
 
 .config(function($stateProvider, $urlRouterProvider, $sceDelegateProvider) {
