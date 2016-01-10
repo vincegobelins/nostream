@@ -3,13 +3,54 @@ angular.module('starter')
   .controller('CaptureCtrl', function($scope, $stateParams, uploadFactory, databaseFactory) {
 
     var init, captureError, captureSuccess, streamCam, successCam, camera;
+    var tl = new TimelineMax();
 
     init = function(){
       $scope.title = 'Capture en cours';
-      $scope.lives = databaseFactory.getCaptations();
+      //$scope.lives = databaseFactory.getCaptations();
+      
+      $scope.lives = [{
+        location: 'Albertville',
+        title: 'Fête de la musique',
+        author: 'vince'
+      }, {
+        location: 'Annecy',
+        title: 'Tomorowland',
+        author: 'adrien'
+      }];
+      
+      setTimeout(function() {
+
+        TweenMax.set('.ns-list', {
+          display: 'block'
+        });
+
+        tl.staggerFrom(".ns-list", .35, {
+          //scale: 0.5,
+          left: -100,
+          opacity: 0,
+          delay: 0.2,
+          //ease: Elastic.easeOut,
+          force3D: true
+        }, 0.2)
+        .staggerFrom('.btn-capture', 1, {
+          alpha: 0
+        }, 0.2, '-=0.4');
+
+      }, 0);
+
       //streamCam();
       //console.log(MediaStreamTrack.getSources(gotSources));
     }
+
+    $scope.$on('$ionicView.enter', function(event, toState, toParams, fromState, fromParams) {
+      tl.restart();
+    });
+
+    $scope.$on('$ionicView.leave', function(event, toState, toParams, fromState, fromParams) {
+      tl.seek(0).pause();
+    });
+
 
     gotSources = function(sourceInfos){
       for (var i = 0; i < sourceInfos.length; i++)

@@ -1,4 +1,4 @@
-
+<!-- 
 <ion-view view-title="Lives">
   
   <ion-nav-bar class="bar-stable bar-positive">
@@ -13,7 +13,7 @@
 
   <ion-content>
     <ion-list>
-      <ul>
+      <ul class="lives">
         <li ng-repeat="(key, value) in lives" ng-class="{'ns-hidden': !value.grid}" class="ns-list ns-list-live">
           <p class="ns-list-title">{{value.title}}</p>
           <p><span class="ion-flag"></span> {{value.location}} <span class="ion-at"></span> {{value.author}}</p>
@@ -21,5 +21,43 @@
         </li>
       </ul>
     </ion-list>
+  </ion-content>
+</ion-view>
+ -->
+
+ <ion-view view-title="Lives">
+  
+  <ion-nav-bar class="bar-stable bar-positive">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear" menu-toggle="left">
+        <span class="one"></span>
+        <span class="two"></span>
+        <span class="three"></span>
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+
+  <ion-content>
+    <ul>
+      <li ng-repeat="(key, value) in lives" class="ns-list ns-list-live">
+        <p class="ns-list-location">{{value.location}}</p>
+
+        <p>
+          <span class="ns-list-title">{{value.title}}</span>
+          <span class="float-right ns-list-author">@{{value.author}}</span>
+        </p>
+
+        <img src="../img/capture/img1.jpg" alt="">
+        
+        <a href="#/app/lives/{{key}}" id="">
+          <img src="../img/button-live.png" alt="" ng-click="capture(key)" class="btn-capture">
+        </a>
+
+      </li>
+    </ul>
+
   </ion-content>
 </ion-view>

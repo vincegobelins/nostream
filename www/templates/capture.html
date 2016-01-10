@@ -1,26 +1,43 @@
-<ion-view view-title="Capture">
+<ion-view view-title="Capture en cours...">
   
   <ion-nav-bar class="bar-stable bar-positive">
     <ion-nav-back-button>
     </ion-nav-back-button>
 
     <ion-nav-buttons side="left">
-      <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+      <button class="button button-icon button-clear" menu-toggle="left">
+        <span class="one"></span>
+        <span class="two"></span>
+        <span class="three"></span>
       </button>
     </ion-nav-buttons>
   </ion-nav-bar>
 
   <ion-content>
-    <h1 class="title-live">{{title}}</h1>
     <ul>
       <li ng-repeat="(key, value) in lives" class="ns-list ns-list-live">
-        <p class="ns-list-title">{{value.title}}</p>
-        <p><span class="ion-flag"></span> {{value.location}} <span class="ion-at"></span> {{value.author}}</p>
-        <button ng-click="capture(key)" class="button button-outline button-assertive"><span class="ion-ionic"></span> Filmer</button>
+        <p class="ns-list-location">{{value.location}}</p>
+
+        <p>
+          <span class="ns-list-title">{{value.title}}</span>
+          <span class="float-right ns-list-author">@{{value.author}}</span>
+        </p>
+
+        <img src="../img/capture/img1.jpg" alt="">
+
+        <img src="../img/button.png" alt="" ng-click="capture(key)" class="btn-capture">
+
+        <!-- <button ng-click="capture(key)" class="button button-outline button-assertive">
+          <span class="ion-ionic"></span> Filmer
+        </button> -->
       </li>
     </ul>
-    <button id="capture" class="button button-outline button-positive">
+    
+    <img src="../img/btn-add-event.png" alt="" class="add-event">
+
+<!--     <button id="capture" class="button button-outline button-positive">
       Ajouter un événement
-    </button>
+    </button> -->
+
   </ion-content>
 </ion-view>
