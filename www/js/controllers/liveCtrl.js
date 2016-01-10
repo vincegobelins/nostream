@@ -7,6 +7,11 @@ angular.module('starter')
 
     init = function(){
       var id = $stateParams['liveId'];
+
+      $scope.live = {
+        author: 'vince'
+      };
+
       $scope.live = databaseFactory.getCaptation(id);
 
       startBtn = document.getElementById('start');
@@ -27,15 +32,26 @@ angular.module('starter')
 
     startLive = function(){
       if (video.paused){
+
+        TweenMax.to('.contour', 0.5, {
+          alpha: 0,
+          display: 'none'
+        });
+
         video.play();
         $scope.$broadcast('isPlaying');
       }
       else {
+
+        TweenMax.to('.contour', 0.5, {
+          alpha: 1,
+          display: 'block'
+        });
+
         video.pause();
         $scope.$broadcast('isPaused');
       }
     }
-
 
     init();
   });

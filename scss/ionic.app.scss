@@ -24,6 +24,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+@import "fonts";
 
 body, html {
 	background: $red;
@@ -70,6 +71,60 @@ img {
 
 }
 
+.author {
+	color: $red;
+	display: block;
+	font-family: sirinstencilregular;
+}
+
+#live-content {
+	text-align: center;
+
+	.author {
+		font-family: sirinstencilregular;
+		font-weight: bold;
+		font-size: 15px;
+		padding-bottom: 20px;
+	}
+
+	.contour {
+		position: absolute;
+		width: 70%;
+		left: 50%;
+		margin-top: -20px;
+    	transform: translateX(-50%);
+    	z-index: 3;
+	}
+	
+	.scroll,
+	.live-content {
+		height: 100%;
+	}
+
+	.location {
+		font-family: italianaregular;
+		color: $blue;
+	}
+
+	.content-bottom {
+		width: 100%;
+		position: absolute;
+		bottom: 5%;
+	}
+
+	.content-middle {
+		position: relative;
+	}
+}
+
+.logo-bleu {
+	margin: 0 auto;
+	display: block;
+	margin-top: 5%;
+	width: 80px;
+	margin-bottom: 20px;
+}
+
 .back-text {
 	display: none !important;
 }
@@ -83,6 +138,8 @@ img {
 	color: $white;
 	transform: rotateZ(-90deg);
     transform-origin: 100% 100%;
+    font-family: sirinstencilregular;
+    letter-spacing: 2px;
 }
 
 .cadre-container {
@@ -123,6 +180,8 @@ img {
 	text-transform: uppercase;
 	color: $blue;
 	font-size: 16px;
+	font-family: sirinstencilregular;
+	letter-spacing: 2px;
 }
 
 .float-right {
@@ -212,27 +271,37 @@ img {
 }
 
 #video {
-  display: none;
-  width: 100%; height: 100%;
-  -webkit-transform: none; /* Safari and Chrome */
-  -moz-transform: none; /* Firefox */
-  -ms-transform: none; /* IE 9 */
-  -o-transform: none; /* Opera */
-  transform: none;
+	display: none;
+	width: 100%; height: 100%;
+	// -webkit-transform: none; /* Safari and Chrome */
+	// -moz-transform: none; /* Firefox */
+	// -ms-transform: none; /* IE 9 */
+	// -o-transform: none; /* Opera */
+	// transform: none;
 }
 
 #live {
-  width: 100%; height: 100%;
-  -webkit-transform: none; /* Safari and Chrome */
-  -moz-transform: none; /* Firefox */
-  -ms-transform: none; /* IE 9 */
-  -o-transform: none; /* Opera */
-  transform: none;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 41px;
+	// top: 50%;
+	// transform: translateY(-50%);
+	// height: 100%;
+	// -webkit-transform: none; /* Safari and Chrome */
+	// -moz-transform: none; /* Firefox */
+	// -ms-transform: none; /* IE 9 */
+	// -o-transform: none; /* Opera */
+	// transform: none;
+}
+
+#start {
+	width: 50%;
 }
 
 #start, #capture {
-  display: block;
-  margin: 20px auto;
+	display: block;
+	margin: 20px auto;
 }
 
 .ns-list {
@@ -250,6 +319,7 @@ img {
 	color: $blue;
 	text-decoration: none;
 	font-size: 25px;
+	font-family: italianaregular;
 }
 
 .btn-capture {
@@ -260,12 +330,14 @@ img {
 }
 
 .ns-list-title {
-	font-weight: bold;
+	letter-spacing: 2px;
 	text-transform: uppercase;
+	font-family: paytone_oneregular;
 }
 
 .ns-list-author {
 	color: $red;
+	font-family: sirinstencilregular;
 }
 
 .ns-detail {

@@ -1,12 +1,32 @@
 <ion-view view-title="Live">
-  <ion-content>
-    <h1 class="title-live">{{live.title}}</h1>
-    <canvas ns-navigator id="live" width="500px" height="350px"></canvas>
-    <video id="video" preload src="{{live.grid_url}}" type="video/webm"></video>
-    <p class="ns-detail"><span class="ion-flag"></span> {{live.location}} <span class="ion-at"></span> {{live.author}}</p>
-    <button id="start" class="button button-outline button-positive">
-      Start live
-    </button>
+  <ion-content id="live-content">
+
+    <img src="../img/logo-bleu.png" alt="" class="logo-bleu">
+
+    <span class="author">@{{live.author}}</span>
+
+    <div class="content-middle">
+
+      <img src="../img/live/contour.png" alt="" class="contour">
+
+      <!-- <h1 class="title-live">{{live.title}}</h1> -->
+      <canvas ns-navigator id="live" width="500px" height="350px"></canvas>
+      <video id="video" preload src="{{live.grid_url}}" type="video/webm"></video>
+      <!-- <p class="ns-detail"><span class="ion-flag"></span> {{live.location}} <span class="ion-at"></span> {{live.author}}</p> -->
+
+    </div>
+    
+    <div class="content-bottom">
+      <h1 class="location">{{live.location}}</h1>      
+      <img src="../img/live/voir.png" alt="" id="start">
+<!--       <button id="start" class="button button-outline button-positive">
+        Start live
+      </button> -->
+    </div>
+
+
+
+    
     <div class="hide button-bar bar-light">
       <a id="left" class="button controls"><i class="icon ion-arrow-left-c"></i></a>
       <a id="up" class="button controls"><i class="icon ion-arrow-up-c"></i></a>
