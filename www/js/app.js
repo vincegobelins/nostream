@@ -30,7 +30,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
 .config(function($stateProvider, $urlRouterProvider, $sceDelegateProvider) {
   $stateProvider
 
-    .state('app', {
+  .state('app', {
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
@@ -39,9 +39,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
 
   .state('app.search', {
     url: '/search',
+    templateUrl: 'templates/search.html'
+  })
+
+  .state('app.home', {
+    url: '/home',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/home.html',
+        controller: 'HomeCtrl'
       }
     }
   })
@@ -75,7 +81,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/lives');
+  $urlRouterProvider.otherwise('/app/home');
 
   $sceDelegateProvider.resourceUrlWhitelist([
       // Allow same origin resource loads.
