@@ -9984,3 +9984,91 @@ img {
 
 .add-event {
   width: 90%; }
+
+/* Slider */
+.ns-slider-wrapper {
+  position: relative; }
+
+.ns-slider-img-wrapper {
+  display: block; }
+  .ns-slider-img-wrapper:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background: -moz-linear-gradient(bottom, transparent 0%, rgba(0, 0, 0, 0.88) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(bottom, transparent 0%, rgba(0, 0, 0, 0.88) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.88) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#e0000000',GradientType=1 );
+    /* IE6-9 */ }
+
+.ns-slider-item {
+  position: relative; }
+  .ns-slider-item img, .ns-slider-item video {
+    display: block; }
+  .ns-slider-item video {
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    -webkit-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%); }
+  .ns-slider-item.active .ns-slider-title {
+    -webkit-transform: translate(0%, 0%);
+    transform: translate(0%, 0%); }
+  .ns-slider-item.active .ns-slider-detail {
+    -webkit-transform: translate(0%, 0%);
+    transform: translate(0%, 0%); }
+  .ns-slider-item.active .ns-slider-img {
+    -webkit-transform: translate(0%, 0%);
+    transform: translate(0%, 0%); }
+
+.ns-slider-bottom {
+  padding: 10% 5%;
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+
+.ns-slider-title {
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  display: block;
+  font-size: 3.5em;
+  color: #ffffff;
+  text-transform: uppercase;
+  -webkit-transform: translate(0%, 100%);
+  transform: translate(0%, 100%); }
+
+.ns-slider-detail {
+  -webkit-transition: all 0.5s ease-out 0.25s;
+  transition: all 0.5s ease-out 0.25s;
+  display: block;
+  font-size: 1.5em;
+  color: #ffffff;
+  text-transform: uppercase;
+  -webkit-transform: translate(0%, -100%);
+  transform: translate(0%, -100%); }
+
+.ns-slider-top {
+  padding: 10% 5%;
+  position: absolute;
+  top: 0;
+  width: 100%; }
+  .ns-slider-top .ns-slider-img {
+    -webkit-transition: all 0.5s ease-out 0.5s;
+    transition: all 0.5s ease-out 0.5s;
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+    -webkit-transform: translate(0%, 100%);
+    transform: translate(0%, 100%); }
+
+.ns-slider-bloc-hidden {
+  overflow: hidden; }
+
+.ns-slider-cta {
+  float: right;
+  width: 50%; }

@@ -7,11 +7,14 @@
     <file url="file://$PROJECT_DIR$/www/js/controllers.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers/captureCtrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers/liveCtrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/livesCtrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/directives/navigator.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/directives/slider.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/services/database.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/services/upload.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/browse.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/capture.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/home.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/live.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/lives.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/menu.html" charset="UTF-8" />

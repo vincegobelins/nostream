@@ -60,7 +60,7 @@ img {
 		left: 50%;
 		transform: translateX(-50%);
 	}
-	
+
 	.titre {
 		position: absolute;
 		bottom: 15%;
@@ -95,7 +95,7 @@ img {
     	transform: translateX(-50%);
     	z-index: 3;
 	}
-	
+
 	.scroll,
 	.live-content {
 		height: 100%;
@@ -373,3 +373,166 @@ img {
 //   transform: translateY(20%);
 //   opacity: 0;
 // }
+
+/* Slider */
+
+.ns-slider-wrapper {
+  position: relative;
+}
+
+.ns-slider-img-wrapper {
+  display: block;
+
+  &:after {
+    content: '';
+    position: absolute; bottom: 0;
+    width: 100%; height: 50%;
+    background: -moz-linear-gradient(bottom,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.88) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.88) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.88) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#e0000000',GradientType=1 ); /* IE6-9 */
+  }
+}
+
+.ns-slider-item {
+  position: relative;
+
+  img, video {
+    display: block;
+  }
+
+  video {
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    @include translate(-50%, 0%);
+  }
+
+  &.active {
+    .ns-slider-title {
+      @include translate(0%, 0%);
+    }
+
+    .ns-slider-detail {
+      @include translate(0%, 0%);
+    }
+
+    .ns-slider-img {
+      @include translate(0%, 0%);
+    }
+  }
+}
+
+.ns-slider-bottom {
+  padding: 10% 5%;
+  position: absolute; bottom: 0;
+  width: 100%;
+}
+
+.ns-slider-title {
+  @include transition(all 0.5s ease-out);
+  display: block;
+  font-size: 3.5em;
+  color: #ffffff;
+  text-transform: uppercase;
+  @include translate(0%, 100%);
+}
+
+
+.ns-slider-detail {
+  @include transition(all 0.5s ease-out 0.25s);
+  display: block;
+  font-size: 1.5em;
+  color: #ffffff;
+  text-transform: uppercase;
+  @include translate(0%, -100%);
+}
+
+.ns-slider-top {
+  padding: 10% 5%;
+  position: absolute; top: 0;
+  width: 100%;
+
+  .ns-slider-img {
+    @include transition(all 0.5s ease-out 0.5s);
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+    @include translate(0%, 100%);
+  }
+}
+
+.ns-slider-bloc-hidden {
+  overflow: hidden;
+}
+
+.ns-slider-cta {
+  float: right;
+  width: 50%;
+}
+
+
+// generic transform
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+// scale
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+// translate
+@mixin translate ($x, $y) {
+  @include transform(translate($x, $y));
+}
+// skew
+@mixin skew ($x, $y) {
+  @include transform(skew(#{$x}deg, #{$y}deg));
+}
+//transform origin
+@mixin transform-origin ($origin) {
+  moz-transform-origin: $origin;
+  -o-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  -webkit-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+@mixin transition($transition...) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
+@mixin transition-property($property...) {
+  -moz-transition-property:    $property;
+  -o-transition-property:      $property;
+  -webkit-transition-property: $property;
+  transition-property:         $property;
+}
+@mixin transition-duration($duration...) {
+  -moz-transition-property:    $duration;
+  -o-transition-property:      $duration;
+  -webkit-transition-property: $duration;
+  transition-property:         $duration;
+}
+@mixin transition-timing-function($timing...) {
+  -moz-transition-timing-function:    $timing;
+  -o-transition-timing-function:      $timing;
+  -webkit-transition-timing-function: $timing;
+  transition-timing-function:         $timing;
+}
+@mixin transition-delay($delay...) {
+  -moz-transition-delay:    $delay;
+  -o-transition-delay:      $delay;
+  -webkit-transition-delay: $delay;
+  transition-delay:         $delay;
+}

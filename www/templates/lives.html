@@ -1,6 +1,6 @@
-<!-- 
+<!--
 <ion-view view-title="Lives">
-  
+
   <ion-nav-bar class="bar-stable bar-positive">
     <ion-nav-back-button>
     </ion-nav-back-button>
@@ -26,7 +26,7 @@
  -->
 
  <ion-view view-title="Lives">
-  
+
   <ion-nav-bar class="bar-stable bar-positive">
     <ion-nav-back-button>
     </ion-nav-back-button>
@@ -41,6 +41,13 @@
   </ion-nav-bar>
 
   <ion-content>
+
+    <!-- Slider start -->
+    <div class="ns-slider-wrapper">
+      <div nsslider="lives"></div>
+    </div>
+    <!-- Slider end -->
+    <!--
     <ul>
       <li ng-repeat="(key, value) in lives" class="ns-list ns-list-live">
         <p class="ns-list-location">{{value.location}}</p>
@@ -51,13 +58,13 @@
         </p>
 
         <img src="../img/capture/img1.jpg" alt="">
-        
+
         <a href="#/app/lives/{{key}}" id="">
           <img src="../img/button-live.png" alt="" ng-click="capture(key)" class="btn-capture">
         </a>
 
       </li>
     </ul>
-
+    -->
   </ion-content>
 </ion-view>
