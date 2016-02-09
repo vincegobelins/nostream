@@ -9759,6 +9759,68 @@ body, html {
 img {
   width: 100%; }
 
+.tap {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  border-radius: 100%;
+  z-index: 99;
+  animation-name: tapAnim;
+  animation-repeat: 1;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  background: -webkit-radial-gradient(50%, transparent, #fff);
+  background: radial-gradient(at 50%, transparent, #fff); }
+  .tap.green:before {
+    background: -webkit-radial-gradient(50%, transparent, green);
+    background: radial-gradient(at 50%, transparent, green); }
+  .tap.yellow:before {
+    background: -webkit-radial-gradient(50%, transparent, yellow);
+    background: radial-gradient(at 50%, transparent, yellow); }
+  .tap.blue:before {
+    background: -webkit-radial-gradient(50%, transparent, blue);
+    background: radial-gradient(at 50%, transparent, blue); }
+
+.tap:before {
+  content: ' ';
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  border-radius: 100%;
+  z-index: 99;
+  animation-name: tapAnim;
+  animation-repeat: 1;
+  animation-duration: 1.6s;
+  animation-direction: alternate;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  top: 0%;
+  left: 0%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  background: -webkit-radial-gradient(50%, transparent, red);
+  background: radial-gradient(at 50%, transparent, red); }
+
+@keyframes tapAnim {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  50% {
+    opacity: 100;
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0); } }
+
 #home {
   background: url("../img/home/bg.jpg");
   background-size: cover; }
@@ -9772,8 +9834,9 @@ img {
     width: 50%;
     display: block;
     position: absolute;
-    bottom: 5%;
+    bottom: 2%;
     left: 50%;
+    z-index: 99;
     transform: translateX(-50%); }
   #home .titre {
     position: absolute;
@@ -9849,7 +9912,7 @@ img {
   margin: 0 auto;
   width: 80%;
   height: 100%;
-  top: 50%;
+  top: 46%;
   left: 10%;
   transform: translateY(-50%);
   background: url("../img/home/contour.png") no-repeat;
