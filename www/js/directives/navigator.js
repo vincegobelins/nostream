@@ -1,4 +1,4 @@
-angular.module('starter.directives', [])
+angular.module('starter')
 
   .directive("nsNavigator", function () {
     return {
@@ -6,7 +6,7 @@ angular.module('starter.directives', [])
       replace: true,
       transclude: true,
       scope: {title: '=expanderTitle', control: '='},
-      link: function (scope, element, attrs) {
+      link: function (scope, element) {
         var init, render, drawLive, setLivePosition;
         var video, live, liveCtx, row, livePos, transitionVelocity, swipeDetect, tweenPosition;
         var isPlaying;
@@ -15,7 +15,7 @@ angular.module('starter.directives', [])
           video = document.getElementById('video');
           live = element[0];
           liveCtx = live.getContext("2d");
-          row = 2;
+          row = 3;
           isPlaying = false;
           livePos = {y:0, x:0};
           transitionVelocity = 0.75;
@@ -23,6 +23,14 @@ angular.module('starter.directives', [])
           liveCtx.rect(0,0,live.width,live.height);
           liveCtx.fillStyle="#000000";
           liveCtx.fill();
+
+          var windowHeight = window.innerHeight;
+          $('#live').css('height', windowHeight - 40);
+
+          window.onresize = function() {
+            var windowHeight = window.innerHeight;
+            $('#live').css('height', windowHeight - 40);
+          };
 
           // set swipe detection
           swipeDetect(function(direction){
@@ -65,7 +73,6 @@ angular.module('starter.directives', [])
         }
 
         tweenPosition = function(position, nextPosition, axis){
-          console.log(nextPosition);
           if(axis == 'y' && nextPosition <= 0 && nextPosition > -live.height * row){
             TweenMax.to(position, transitionVelocity, {y:nextPosition, ease:Power3.easeOut});
           }

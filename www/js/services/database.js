@@ -8,17 +8,20 @@ angular.module('starter')
           locationImg: 'img/thumbs/briseglace.png',
           title: 'Bigflo et Oli',
           preview: 'img/thumbs/concert2.mp4',
+          grid_url: 'movie/dondiablo.mp4',
           tag: '#RAP #HIP-HOP'
         }, {
           location: 'Paris',
           locationImg: 'img/thumbs/briseglace.png',
           title: 'L.E.J',
           preview: 'img/thumbs/concert1.mp4',
+          grid_url: 'movie/output.mp4',
           tag: '#MASHUP #VIOLONCELLE'
         }, {
           location: 'Grenoble',
           locationImg: 'img/thumbs/briseglace.png',
           title: 'Les insiders',
+          grid_url: 'movie/output.mp4',
           preview: 'img/thumbs/concert2.mp4',
           tag: '#GOBELINS #SOUTENANCE'
         }];
@@ -35,9 +38,11 @@ angular.module('starter')
       },
 
       getCaptation : function(id){
-        var query = config.BDD + 'captations/' + id;
-        var result = new Firebase(query);
-        return $firebaseObject(result);
+        //var query = config.BDD + 'captations/' + id;
+        //var result = new Firebase(query);
+        //return $firebaseObject(result);
+        var data = this.getData();
+        return data[id];
       }
     }
   });

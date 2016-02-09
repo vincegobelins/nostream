@@ -193,18 +193,14 @@ img {
 	width: 130px;
 }
 
-.bar-stable {
-	height: 42px;
-}
-
 .bar.bar-positive {
 	padding: 0;
 	border: 0;
-	border-color: $blue;
-	background-color: transparent;
+	border-color: $red;
+	background-color: $red;
 
 	.title {
-		color: $blue;
+		color: $white;
 		text-transform: uppercase;
 	}
 
@@ -213,7 +209,7 @@ img {
 	}
 
 	.button {
-		background: $blue;
+		background: $red;
 		border-radius: 0;
 		width: 42px;
 
@@ -281,10 +277,11 @@ img {
 }
 
 #live {
-	width: 100%;
+	width: auto;
 	position: absolute;
-	left: 0;
+	left: 50%;
 	top: 41px;
+  @include translate(-50%, 0%);
 	// top: 50%;
 	// transform: translateY(-50%);
 	// height: 100%;
@@ -469,6 +466,10 @@ img {
 .ns-slider-cta {
   float: right;
   width: 50%;
+}
+
+#live-content {
+  top: 0 !important;
 }
 
 

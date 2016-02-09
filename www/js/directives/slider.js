@@ -1,4 +1,4 @@
-angular.module('starter.directives', [])
+angular.module('starter')
 
 .directive('nsslider',function() {
   return {
@@ -10,7 +10,7 @@ angular.module('starter.directives', [])
     template: '<ul class="ns-slider">' +
     '<li class="slide ns-slider-item" ng-repeat="(key, value) in slides">' +
     '<div class="ns-slider-img-wrapper">' +
-    '<video preload mute loop src="{{value.preview}}"></video>' +
+    '<video preload muted loop src="{{value.preview}}"></video>' +
     '</div>' +
     '<div class="ns-slider-top ns-slider-anim">' +
     '<div class="ns-slider-bloc-hidden">' +
@@ -40,6 +40,12 @@ angular.module('starter.directives', [])
         var windowHeight = window.innerHeight;
         $('.ns-slider-item').css('height', windowHeight - 44);
         $('video').css('height', windowHeight);
+
+        window.onresize = function() {
+          var windowHeight = window.innerHeight;
+          $('.ns-slider-item').css('height', windowHeight - 44);
+          $('video').css('height', windowHeight);
+        };
 
         $('.ns-slider').bxSlider({
           auto: false,

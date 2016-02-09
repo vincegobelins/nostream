@@ -9881,21 +9881,18 @@ img {
   margin: 0 auto;
   width: 130px; }
 
-.bar-stable {
-  height: 42px; }
-
 .bar.bar-positive {
   padding: 0;
   border: 0;
-  border-color: #1b03ff;
-  background-color: transparent; }
+  border-color: #ff1b3e;
+  background-color: #ff1b3e; }
   .bar.bar-positive .title {
-    color: #1b03ff;
+    color: #fff;
     text-transform: uppercase; }
   .bar.bar-positive .left-buttons {
     margin-right: 0; }
   .bar.bar-positive .button {
-    background: #1b03ff;
+    background: #ff1b3e;
     border-radius: 0;
     width: 42px; }
     .bar.bar-positive .button span {
@@ -9935,10 +9932,12 @@ img {
   height: 100%; }
 
 #live {
-  width: 100%;
+  width: auto;
   position: absolute;
-  left: 0;
-  top: 41px; }
+  left: 50%;
+  top: 41px;
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%); }
 
 #start {
   width: 50%; }
@@ -10072,3 +10071,6 @@ img {
 .ns-slider-cta {
   float: right;
   width: 50%; }
+
+#live-content {
+  top: 0 !important; }
