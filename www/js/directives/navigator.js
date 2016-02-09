@@ -25,11 +25,20 @@ angular.module('starter')
           liveCtx.fill();
 
           var windowHeight = window.innerHeight;
+          var windowWidth = window.innerWidth;
           $('#live').css('height', windowHeight - 40);
+          if($('#live').width() < windowWidth){
+            $('#live').css('height', windowWidth);
+          };
 
           window.onresize = function() {
             var windowHeight = window.innerHeight;
+            var windowWidth = window.innerWidth;
             $('#live').css('height', windowHeight - 40);
+
+            if($('#live').width() < windowWidth){
+              $('#live').css('height', windowWidth);
+            };
           };
 
           // set swipe detection
