@@ -8,7 +8,7 @@ angular.module('starter')
       scope: {title: '=expanderTitle', control: '='},
       link: function (scope, element) {
         var init, render, drawLive, setLivePosition;
-        var video, live, liveCtx, row, livePos, transitionVelocity, swipeDetect, tweenPosition;
+        var video, live, liveCtx, row, livePos, transitionVelocity, swipeDetect, tweenPosition, marginTop;
         var isPlaying;
 
         init = function(){
@@ -16,6 +16,7 @@ angular.module('starter')
           live = element[0];
           liveCtx = live.getContext("2d");
           row = 3;
+          marginTop = 0;
           isPlaying = false;
           livePos = {y:0, x:0};
           transitionVelocity = 0.75;
@@ -26,7 +27,7 @@ angular.module('starter')
 
           var windowHeight = window.innerHeight;
           var windowWidth = window.innerWidth;
-          $('#live').css('height', windowHeight - 40);
+          $('#live').css('height', windowHeight - marginTop);
           if($('#live').width() < windowWidth){
             console.log('ok');
             $('#live').css('width', windowWidth);
@@ -35,7 +36,7 @@ angular.module('starter')
           window.onresize = function() {
             var windowHeight = window.innerHeight;
             var windowWidth = window.innerWidth;
-            $('#live').css('height', windowHeight - 40);
+            $('#live').css('height', windowHeight - marginTop);
 
             if($('#live').width() < windowWidth){
               $('#live').css('width', windowWidth);
@@ -44,6 +45,8 @@ angular.module('starter')
               $('#live').css('width', 'auto');
             }
           };
+
+          // video.addEventListener('')
 
           // set swipe detection
           swipeDetect(function(direction){

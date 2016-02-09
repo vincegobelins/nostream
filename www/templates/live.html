@@ -1,45 +1,42 @@
 <ion-view view-title="Live">
 
-  <ion-nav-bar class="bar-stable bar-positive">
-    <ion-nav-back-button>
-    </ion-nav-back-button>
-
-    <ion-nav-buttons side="left">
-      <button class="button button-icon button-clear" menu-toggle="left">
-        <span class="one"></span>
-        <span class="two"></span>
-        <span class="three"></span>
-      </button>
-    </ion-nav-buttons>
-  </ion-nav-bar>
-
   <ion-content id="live-content">
-    <!--
-    <img src="../img/logo-bleu.png" alt="" class="logo-bleu">
+    
+    <div class="infosBar">
 
-    <span class="author">@{{live.author}}</span>
-    -->
+      <div class="leftInfos">
+        <span class="live">
+          <img src="img/icons/noun_55528_cc.png" alt=""> LIVE
+        </span>
+      </div>
+
+      <div class="rightInfos">
+        <span class="">
+          <img src="img/icons/noun_58612_cc.png" alt=""> {{streams}}
+        </span>
+        <span class="">
+          <img src="img/icons/noun_91232_cc.png" style="max-height: 27px;"> {{navigateurs}}
+        </span>
+        <span style="width: 85px; text-align: left;">
+          <img src="img/icons/noun_200962_cc.png" style="max-height: 27px;"> {{progress | date: 'm:s' }}
+        </span>
+      </div>
+    </div>
+
+    <div class="actionsBar">
+      <div class="leftInfos">
+        <img src="img/icons/noun_29507_cc.png" alt="">
+        <img src="img/icons/noun_24623_cc.png" alt="">
+        <img src="img/icons/noun_18353.png" alt="">
+        <img src="img/icons/noun_137154_cc.png" alt="">
+        <img src="img/icons/noun_91232_cc.png" alt="">
+      </div>
+    </div>
+
     <div class="content-middle">
-
-     <!--  <img src="../img/live/contour.png" alt="" class="contour"> -->
-
-      <!-- <h1 class="title-live">{{live.title}}</h1> -->
       <canvas ns-navigator id="live" width="1280px" height="720px"></canvas>
-      <video id="video" preload src="{{live.grid_url}}" type="video/webm"></video>
-      <!-- <p class="ns-detail"><span class="ion-flag"></span> {{live.location}} <span class="ion-at"></span> {{live.author}}</p> -->
-
+      <video id="video" preload src="{{live.grid_url}}" type="video/webm" loop></video>
     </div>
-
-    <div class="content-bottom">
-      <h1 class="location">{{live.location}}</h1>
-      <img src="img/live/voir.png" alt="" id="start">
-<!--       <button id="start" class="button button-outline button-positive">
-        Start live
-      </button> -->
-    </div>
-
-
-
 
     <div class="hide button-bar bar-light">
       <a id="left" class="button controls"><i class="icon ion-arrow-left-c"></i></a>

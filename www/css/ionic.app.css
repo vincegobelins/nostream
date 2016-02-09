@@ -9879,7 +9879,7 @@ img {
 
 .logo {
   margin: 0 auto;
-  width: 130px; }
+  width: 140px; }
 
 .bar.bar-positive {
   padding: 0;
@@ -9931,11 +9931,58 @@ img {
   width: 100%;
   height: 100%; }
 
+.infosBar,
+.actionsBar {
+  position: absolute;
+  z-index: 9999;
+  bottom: 0;
+  top: auto;
+  right: 0;
+  left: 0;
+  padding: 10px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)); }
+  .infosBar img,
+  .actionsBar img {
+    width: auto;
+    max-height: 30px; }
+
+.leftInfos {
+  float: left; }
+
+.rightInfos {
+  float: right; }
+
+.infosBar {
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 10px;
+  bottom: auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent); }
+  .infosBar span {
+    line-height: 27px;
+    display: inline-block;
+    font-family: sirinstencilregular;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 16px;
+    color: #fff; }
+    .infosBar span img {
+      float: left;
+      padding-right: 3px; }
+  .infosBar .live {
+    color: #fe3652; }
+    .infosBar .live img {
+      animation-duration: 1s;
+      animation-name: fadeInRepeat;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      padding-right: 0px; }
+
 #live {
   width: auto;
   position: absolute;
   left: 50%;
-  top: 41px;
   -webkit-transform: translate(-50%, 0%);
   transform: translate(-50%, 0%); }
 
@@ -10026,7 +10073,7 @@ img {
     transform: translate(0%, 0%); }
 
 .ns-slider-bottom {
-  padding: 10% 5%;
+  padding: 5% 5%;
   position: absolute;
   bottom: 0;
   width: 100%; }
@@ -10038,6 +10085,7 @@ img {
   font-size: 3.5em;
   color: #ffffff;
   text-transform: uppercase;
+  font-family: paytone_oneregular;
   -webkit-transform: translate(0%, 100%);
   transform: translate(0%, 100%); }
 
@@ -10048,6 +10096,9 @@ img {
   font-size: 1.5em;
   color: #ffffff;
   text-transform: uppercase;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-family: paytone_oneregular;
   -webkit-transform: translate(0%, -100%);
   transform: translate(0%, -100%); }
 
@@ -10070,7 +10121,17 @@ img {
 
 .ns-slider-cta {
   float: right;
-  width: 50%; }
+  width: 70%;
+  max-width: 250px;
+  position: relative;
+  bottom: -20px;
+  right: -30px; }
 
 #live-content {
   top: 0 !important; }
+
+@keyframes fadeInRepeat {
+  from {
+    opacity: 100; }
+  to {
+    opacity: 0; } }

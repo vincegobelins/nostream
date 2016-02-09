@@ -190,7 +190,7 @@ img {
 
 .logo {
 	margin: 0 auto;
-	width: 130px;
+	width: 140px;
 }
 
 .bar.bar-positive {
@@ -276,12 +276,73 @@ img {
 	// transform: none;
 }
 
+.infosBar,
+.actionsBar {
+	position: absolute;
+	z-index: 9999;
+	bottom: 0;
+    top: auto;
+    right: 0;
+    left: 0;
+    padding: 10px;
+    background: linear-gradient(transparent, rgba(#000, 0.5));
+
+	img {
+	    width: auto;
+		max-height: 30px;
+	}
+}
+
+.leftInfos {
+	float: left;
+}
+
+.rightInfos {
+	float: right;
+}
+
+.infosBar {
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 10px;
+    bottom: auto;
+    background: linear-gradient(rgba(#000, 0.5), transparent);
+
+	span {
+		line-height: 27px;
+    	display: inline-block;
+    	font-family: sirinstencilregular;
+    	font-weight: bold;
+    	letter-spacing: 2px;
+    	font-size: 16px;
+    	color: #fff;
+
+    	img {
+    		float: left;
+    		padding-right: 3px;
+    	}
+	}
+
+	.live {
+		color: #fe3652;
+    	
+    	img {
+    		animation-duration: 1s;
+			animation-name: fadeInRepeat;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			padding-right: 0px;
+    	}
+	}
+}
+
 #live {
 	width: auto;
 	position: absolute;
 	left: 50%;
-	top: 41px;
-  @include translate(-50%, 0%);
+	// top: 41px;
+	@include translate(-50%, 0%);
 	// top: 50%;
 	// transform: translateY(-50%);
 	// height: 100%;
@@ -421,7 +482,7 @@ img {
 }
 
 .ns-slider-bottom {
-  padding: 10% 5%;
+  padding: 5% 5%;
   position: absolute; bottom: 0;
   width: 100%;
 }
@@ -432,17 +493,21 @@ img {
   font-size: 3.5em;
   color: #ffffff;
   text-transform: uppercase;
+  font-family: paytone_oneregular;
   @include translate(0%, 100%);
 }
 
 
 .ns-slider-detail {
-  @include transition(all 0.5s ease-out 0.25s);
-  display: block;
-  font-size: 1.5em;
-  color: #ffffff;
-  text-transform: uppercase;
-  @include translate(0%, -100%);
+	@include transition(all 0.5s ease-out 0.25s);
+	display: block;
+	font-size: 1.5em;
+	color: #ffffff;
+	text-transform: uppercase;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	font-family: paytone_oneregular;
+	@include translate(0%, -100%);
 }
 
 .ns-slider-top {
@@ -464,14 +529,27 @@ img {
 }
 
 .ns-slider-cta {
-  float: right;
-  width: 50%;
+	float: right;
+	width: 70%;
+	max-width: 250px; 
+	position: relative;
+	bottom: -20px;
+	right: -30px;
 }
 
 #live-content {
   top: 0 !important;
 }
 
+@keyframes fadeInRepeat {
+  from {
+    opacity: 100;
+  }
+  
+  to {
+    opacity: 0;
+  }
+}
 
 // generic transform
 @mixin transform($transforms) {
