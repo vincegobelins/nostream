@@ -1,8 +1,8 @@
 angular.module('starter')
 
-  .controller('LiveCtrl', function($scope, $stateParams, databaseFactory, $timeout) {
+  .controller('LiveCtrl', function($scope, $stateParams, databaseFactory, $timeout, $ionicGesture) {
 
-    var init, setListeners, startLive, setLivePosition;
+    var init, setListeners, startLive, setLivePosition, launchTap;
     var startBtn, video, controls;
     var minutes, secondes;
     var start = null;
@@ -52,7 +52,9 @@ angular.module('starter')
       });
 
       $scope.$on('$ionicView.leave', function(event, toState, toParams, fromState, fromParams) {
-          stopLive();  
+          stopLive();
+
+          $('.tap').remove();
       });
       
     }
@@ -96,6 +98,25 @@ angular.module('starter')
 
         video.play();
         $scope.$broadcast('isPlaying');
+    }
+
+    var rootLiveContent = $('#live-content');
+    var tapSize = 70;
+    var halfTapSize = tapSize / 2;
+
+    $ionicGesture.on("tap", function (event) {
+      var x = event.gesture.center.pageX;
+      var y = event.gesture.center.pageY;
+
+      launchTap(x, y);
+    }, rootLiveContent);
+
+    var colorList = ['red', 'blue', 'blue'];
+
+    launchTap = function(x, y) {
+      var val = Math.floor(Math.random() * 2) + 0;
+
+      rootLiveContent.append('<div class="tap ' + colorList[val] + '" style="top:' + (y - halfTapSize) + 'px; left: ' + (x - halfTapSize) + 'px;"></div>')
     }
 
     init();

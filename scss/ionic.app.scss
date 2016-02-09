@@ -34,10 +34,84 @@ img {
 	width: 100%;
 }
 
-.fadeIn {
-	//opacity: 0;
+.tap {
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	border-radius: 100%;
+	z-index: 99;
+
+	animation-name: tapAnim;
+	animation-repeat: 1;
+	animation-duration: 1s;
+	animation-direction: alternate;
+	transition-property: all;
+    transition-timing-function: ease-in-out;
+	
+	top: 50%;
+	left: 50%;
+
+	@include scale(0);
+
+	background: -webkit-radial-gradient(50%, transparent, #fff);
+	background: radial-gradient(at 50%, transparent, #fff);
+
+	&.green:before {
+		background: -webkit-radial-gradient(50%, transparent, green);
+		background: radial-gradient(at 50%, transparent, green);	
+	}
+
+	&.yellow:before {
+		background: -webkit-radial-gradient(50%, transparent, yellow);
+		background: radial-gradient(at 50%, transparent, yellow);	
+	}
+
+	&.blue:before {
+		background: -webkit-radial-gradient(50%, transparent, blue);
+		background: radial-gradient(at 50%, transparent, blue);	
+	}
 }
 
+.tap:before {
+	content: ' ';
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	border-radius: 100%;
+	z-index: 99;
+
+	animation-name: tapAnim;
+	animation-repeat: 1;
+	animation-duration: 1.6s;
+	animation-direction: alternate;
+	transition-property: all;
+    transition-timing-function: ease-in-out;
+	
+	top: 0%;
+	left: 0%;
+
+	@include scale(0);
+
+	background: -webkit-radial-gradient(50%, transparent, red);
+	background: radial-gradient(at 50%, transparent, red);
+}
+
+@keyframes tapAnim {
+  0% {
+    opacity: 0;
+    @include scale(0);
+  }
+  
+  50% {
+    opacity: 100;
+    @include scale(1);
+  }
+
+  100% {
+  	opacity: 0;
+    @include scale(0);
+  }
+}
 #home {
 	background: url('../img/home/bg.jpg');
 	background-size: cover;
@@ -56,8 +130,9 @@ img {
 		width: 50%;
 		display: block;
 		position: absolute;
-		bottom: 5%;
+		bottom: 2%;
 		left: 50%;
+		z-index: 99;
 		transform: translateX(-50%);
 	}
 
@@ -156,7 +231,7 @@ img {
 	margin: 0 auto;
 	width: 80%;
 	height: 100%;
-	top: 50%;
+	top: 46%;
 	left: 10%;
 	transform: translateY(-50%);
 	background: url('../img/home/contour.png') no-repeat;
