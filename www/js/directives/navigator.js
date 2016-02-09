@@ -39,7 +39,10 @@ angular.module('starter')
 
             if($('#live').width() < windowWidth){
               $('#live').css('width', windowWidth);
-            };
+            }
+            else {
+              $('#live').css('width', 'auto');
+            }
           };
 
           // set swipe detection
