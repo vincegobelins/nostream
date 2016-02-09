@@ -19,10 +19,10 @@ angular.module('starter')
     '</div>' +
     '<div class="ns-slider-bottom ns-slider-anim">' +
     '<div class="ns-slider-bloc-hidden">' +
-    '<p class="ns-slider-detail">{{value.tag}}</p>' +
+    '<h1 class="ns-slider-title">{{value.title}}</strong></h1>' +
     '</div>' +
     '<div class="ns-slider-bloc-hidden">' +
-    '<h1 class="ns-slider-title">{{value.title}}</strong></h1>' +
+    '<p class="ns-slider-detail">{{value.tag}}</p>' +
     '</div>' +
     '<div class="ns-slider-bloc-hidden">' +
     '<a href="#/app/lives/{{key}}">' +

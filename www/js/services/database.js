@@ -4,6 +4,13 @@ angular.module('starter')
 
       getData: function(){
         var lives = [{
+          location: 'Port-Barcarès',
+          locationImg: 'img/thumbs/briseglace.png',
+          title: 'Don Diablo',
+          grid_url: 'movie/dondiablo.mp4',
+          preview: 'img/thumbs/dondiablo.mp4',
+          tag: '#ELECTRO #Electrobeach'
+        }, {
           location: 'Annecy',
           locationImg: 'img/thumbs/briseglace.png',
           title: 'Bigflo et Oli',
@@ -24,7 +31,8 @@ angular.module('starter')
           grid_url: 'movie/output.mp4',
           preview: 'img/thumbs/concert2.mp4',
           tag: '#GOBELINS #SOUTENANCE'
-        }];
+        }
+        ];
 
         return lives;
       },

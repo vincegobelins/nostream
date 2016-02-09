@@ -47,7 +47,7 @@ img {
 	animation-direction: alternate;
 	transition-property: all;
     transition-timing-function: ease-in-out;
-	
+
 	top: 50%;
 	left: 50%;
 
@@ -58,17 +58,17 @@ img {
 
 	&.green:before {
 		background: -webkit-radial-gradient(50%, transparent, green);
-		background: radial-gradient(at 50%, transparent, green);	
+		background: radial-gradient(at 50%, transparent, green);
 	}
 
 	&.yellow:before {
 		background: -webkit-radial-gradient(50%, transparent, yellow);
-		background: radial-gradient(at 50%, transparent, yellow);	
+		background: radial-gradient(at 50%, transparent, yellow);
 	}
 
 	&.blue:before {
 		background: -webkit-radial-gradient(50%, transparent, blue);
-		background: radial-gradient(at 50%, transparent, blue);	
+		background: radial-gradient(at 50%, transparent, blue);
 	}
 }
 
@@ -86,7 +86,7 @@ img {
 	animation-direction: alternate;
 	transition-property: all;
     transition-timing-function: ease-in-out;
-	
+
 	top: 0%;
 	left: 0%;
 
@@ -101,7 +101,7 @@ img {
     opacity: 0;
     @include scale(0);
   }
-  
+
   50% {
     opacity: 100;
     @include scale(1);
@@ -401,7 +401,7 @@ img {
 
 	.live {
 		color: #fe3652;
-    	
+
     	img {
     		animation-duration: 1s;
 			animation-name: fadeInRepeat;
@@ -564,12 +564,15 @@ img {
 
 .ns-slider-title {
   @include transition(all 0.5s ease-out);
+  margin: 0; padding: 0;
   display: block;
   font-size: 3.5em;
   color: #ffffff;
-  text-transform: uppercase;
-  font-family: paytone_oneregular;
+  //text-transform: uppercase;
+  font-family: 'National Medium Italic';
+  font-style: italic;
   @include translate(0%, 100%);
+  text-align: center;
 }
 
 
@@ -581,7 +584,8 @@ img {
 	text-transform: uppercase;
 	margin-bottom: 0;
 	padding-bottom: 0;
-	font-family: paytone_oneregular;
+	font-family: 'National Light Italic';
+  text-align: center;
 	@include translate(0%, -100%);
 }
 
@@ -604,12 +608,10 @@ img {
 }
 
 .ns-slider-cta {
-	float: right;
 	width: 70%;
-	max-width: 250px; 
+	max-width: 250px;
 	position: relative;
-	bottom: -20px;
-	right: -30px;
+  margin: 0 auto;
 }
 
 #live-content {
@@ -620,7 +622,7 @@ img {
   from {
     opacity: 100;
   }
-  
+
   to {
     opacity: 0;
   }
@@ -690,3 +692,4 @@ img {
   -webkit-transition-delay: $delay;
   transition-delay:         $delay;
 }
+
