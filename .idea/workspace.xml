@@ -105,8 +105,8 @@
       <file leaf-file-name="navigator.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/directives/navigator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1450151">
-              <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.5800604">
+              <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -651,12 +651,12 @@
       <workItem from="1451744912296" duration="19492000" />
       <workItem from="1454057245736" duration="23089000" />
       <workItem from="1454524011346" duration="14971000" />
-      <workItem from="1454929033913" duration="16450000" />
+      <workItem from="1454929033913" duration="16988000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150901000" />
+    <option name="totallyTimeSpent" value="151439000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1111,8 +1111,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/directives/navigator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1450151">
-          <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.5800604">
+          <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
           <folding />
         </state>
       </provider>

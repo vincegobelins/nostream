@@ -28,7 +28,8 @@ angular.module('starter')
           var windowWidth = window.innerWidth;
           $('#live').css('height', windowHeight - 40);
           if($('#live').width() < windowWidth){
-            $('#live').css('height', windowWidth);
+            console.log('ok');
+            $('#live').css('width', windowWidth);
           };
 
           window.onresize = function() {
@@ -37,7 +38,7 @@ angular.module('starter')
             $('#live').css('height', windowHeight - 40);
 
             if($('#live').width() < windowWidth){
-              $('#live').css('height', windowWidth);
+              $('#live').css('width', windowWidth);
             };
           };
 
